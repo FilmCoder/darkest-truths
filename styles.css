@@ -1,0 +1,77 @@
+/** CSS Styles */
+
+#getting-started .intro {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+#getting-started .card {
+  border-radius: 0;
+  margin-bottom: 5rem;
+}
+
+#getting-started a {
+  color: inherit;
+}
+
+#getting-started .list {
+  margin: 0 2rem !important;
+}
+
+#getting-started main {
+  text-align: center;
+}
+
+/**  allows background image on body to show **/
+.application, .application .v-toolbar {
+  background: #ffffff00 !important;
+}
+
+.main-toolbar div {
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+
+
+.main-text-container {
+  color: #ffffffcf;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 10px;
+}
+
+.opener {
+  font-weight: 100;
+  font-size: 40px;
+  opacity: 0.92;
+}
+
+.bg-image {
+      /* The image used */
+    background-image: url("pics/IMG_1844_rotated.png");
+    background-position: 0px calc(40% - 150px) !important;
+    background-color: black;
+
+    /* Full height */
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.truth-body {
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.truth-bodies {
+    padding-top: 50px;
+}
