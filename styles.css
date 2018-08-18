@@ -75,3 +75,15 @@
 .truth-bodies {
     padding-top: 50px;
 }
+
+.why-button {
+  text-align: center;
+  margin-left: auto;
+  color: #ffffff80 !important;
+  font-weight: 300;
+  outline: solid #ffffff40 1px;
+}
+
+.bottom-toolbar {
+  background-color: #ffffff00 !important;
+}
