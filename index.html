@@ -19,13 +19,13 @@
             <v-toolbar dark fixed app :clipped-left="clipped" class="main-toolbar elevation-0">
 
 
-                <v-btn flat>Me</v-btn>
+                <v-btn @click="currentPage='me'" flat>Me</v-btn>
 
                 <v-spacer></v-spacer>
 
-                <v-btn flat>Written Work</v-btn>
-                <v-btn flat>Films</v-btn>
-                <v-btn flat>Tech Projects</v-btn>
+                <v-btn @click="currentPage='written'"flat>Written Work</v-btn>
+                <v-btn @click="currentPage='films'" flat>Films</v-btn>
+                <v-btn @click="currentPage='tech'" flat>Tech Projects</v-btn>
 
 
                 <!-- <v-btn icon>
@@ -48,40 +48,134 @@
                     <v-container class="main-text-container" fluid>
 
 
+                        <div class="me-page" v-if="currentPage=='me'">
+                            <div class="opener">Yesterday I couldn't stop crying because I got rejected.</div>
 
-                        <!-- <div class="opener">Yesterday I couldn't stop crying because I got rejected.</div> -->
+                            <!-- <page></page> -->
+                            <v-layout row wrap align-center>
 
-                        <!-- <page></page> -->
-                        <!-- <v-layout row wrap align-center>
+                                <span class="truth-body">For 20 minutes I sat there frozen, chin in my hands
+                                  and a tight knot in my throat. I was staring at the blank wall inches from my face, stuck,
+                                   unable to shift my gaze even a few degrees to either direction. Finally, I lifted myself
+                                   and did what needed to be done. For
+                                    me at least, 20 minutes to get over a rejection that big is a new record,
+                                  and I'm proud of myself for it.
+                                </span>
 
-                            <span class="truth-body">For 20 minutes I sat there frozen, chin in my hands
-                              and a tight knot in my throat. I was staring at the blank wall inches from my face, stuck,
-                               unable to shift my gaze even a few degrees to either direction. Finally, I lifted myself
-                               and did what needed to be done. For
-                                me at least, 20 minutes to get over a rejection that big is a new record,
-                              and I'm proud of myself for it.
-                            </span>
-
-                        </v-layout> -->
-
-
-
-                        <div class="opener">I think sometimes we hide, we fake, we pretend.</div>
-
-                        <!-- <page></page> -->
-                        <v-layout row wrap align-center>
-
-                            <span class="truth-body">This page is about honesty, about being vulnerable.
-                              Every day you visit you'll see a new piece of me: a terror, a darkness, a hope, a dream.
-
-                              I want to be honest to every stranger, to listen to them,
-                              to trust them - even with my hopes and insecurities.
-                            </span>
-
-                        </v-layout>
+                            </v-layout>
+                        </div>
 
 
 
+                        <div class="why-page" v-if="currentPage=='why'">
+                            <div class="opener">I think sometimes we hide, we fake, we pretend.</div>
+
+                            <!-- <page></page> -->
+                            <v-layout row wrap align-center>
+
+                                <span class="truth-body">This page is about honesty, about being vulnerable.
+                                  Every day you visit you'll see a new piece of me.
+
+                                  I want to be honest to every stranger and every friend, to listen to them,
+                                  to trust them - even with my hopes and insecurities.
+                                </span>
+
+                            </v-layout>
+                        </div>
+
+
+                        <div class="written-page" v-if="currentPage=='written'">
+                            <!-- <v-layout row wrap align-center> -->
+                                <v-flex xs12>
+                                    <v-container grid-list-lg fluid>
+                                        <v-layout row wrap>
+                                            <!-- <v-flex v-for="n in 9" :key="n" xs2>
+                                                <v-card flat tile>
+                                                    <v-card-media :src="`https://unsplash.it/150/300?image=${Math.floor(Math.random() * 100) + 1}`" height="100px"></v-card-media>
+                                                </v-card>
+                                            </v-flex> -->
+
+                                            <v-flex class="story-card-flex" xs12 sm4>
+                                                <v-card color="darken-2" class="white--text story-card">
+                                                    <v-card-title primary-title>
+                                                        <div class="headline">Sinking into the Swirling Torrent</div>
+                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
+                                                        </div>
+                                                    </v-card-title>
+                                                    <v-card-actions class="story-card-actions">
+                                                        <a href="https://medium.com/@DominicNapoleon/sinking-into-the-swirling-torrent-48cd3924e26c"
+                                                           target="_blank">
+                                                            <v-btn flat dark>Read now</v-btn>
+                                                        </a>
+                                                    </v-card-actions>
+                                                </v-card>
+                                            </v-flex>
+
+                                            <v-flex class="story-card-flex" xs12 sm4>
+                                                <v-card color="darken-2" class="white--text story-card">
+                                                    <v-card-title primary-title>
+                                                        <div class="headline">Yo What is going on Home Dawg?</div>
+                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
+                                                          La dee dahhhhhh swag swag.
+                                                        </div>
+                                                    </v-card-title>
+                                                    <v-card-actions class="story-card-actions">
+                                                        <v-btn flat dark>Read now</v-btn>
+                                                    </v-card-actions>
+                                                </v-card>
+                                            </v-flex>
+
+
+                                            <v-flex class="story-card-flex" xs12 sm4>
+                                                <v-card color="darken-2" class="white--text story-card">
+                                                    <v-card-title primary-title>
+                                                        <div class="headline">Yo What is going on Home Dawg?</div>
+                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
+                                                          La dee dahhhhhh swag swag.
+                                                        </div>
+                                                    </v-card-title>
+                                                    <v-card-actions class="story-card-actions">
+                                                        <v-btn flat dark>Read now</v-btn>
+                                                    </v-card-actions>
+                                                </v-card>
+                                            </v-flex>
+
+
+                                            <v-flex class="story-card-flex" xs12 sm4>
+                                                <v-card color="darken-2" class="white--text story-card">
+                                                    <v-card-title primary-title>
+                                                        <div class="headline">Yo What is going on Home Dawg?</div>
+                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
+                                                          La dee dahhhhhh swag swag.
+                                                        </div>
+                                                    </v-card-title>
+                                                    <v-card-actions class="story-card-actions">
+                                                        <v-btn flat dark>Read now</v-btn>
+                                                    </v-card-actions>
+                                                </v-card>
+                                            </v-flex>
+
+
+                                            <v-flex class="story-card-flex" xs12 sm4>
+                                                <v-card color="darken-2" class="white--text story-card">
+                                                    <v-card-title primary-title>
+                                                        <div class="headline">Yo What is going on Home Dawg?</div>
+                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
+                                                          La dee dahhhhhh swag swag.
+                                                        </div>
+                                                    </v-card-title>
+                                                    <v-card-actions class="story-card-actions">
+                                                        <v-btn flat dark>Read now</v-btn>
+                                                    </v-card-actions>
+                                                </v-card>
+                                            </v-flex>
+
+
+                                        </v-layout>
+                                    </v-container>
+                                </v-flex>
+                            <!-- </v-layout> -->
+                        </div>
 
 
                     </v-container>
@@ -94,7 +188,7 @@
 
 
           <v-footer style="text-align: center" class="pa-3 bottom-toolbar" fixed height=70>
-              <v-btn class="why-button" flat>Why Did I Write This?</v-btn>
+              <v-btn @click="currentPage='why'" class="why-button" flat>Why Did I Write This?</v-btn>
           </v-footer>
 
         </v-app>

@@ -35,7 +35,8 @@
 
 
 
-.main-text-container {
+.why-page, .me-page
+ {
   color: #ffffffcf;
     text-align: center;
     padding-left: 50px;
@@ -87,3 +88,32 @@
 .bottom-toolbar {
   background-color: #ffffff00 !important;
 }
+
+.story-card {
+  background-color: #ffffff00 !important;
+  outline: 1px solid #ffffff5c;
+}
+
+.story-card .headline {
+  font-weight: 300;
+}
+
+.story-card button {
+  font-weight: 400 !important;
+  margin-left: -7px !important;
+}
+
+.story-card, .story-card button {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.story-card, .story-card-flex {
+  height: 100;
+}
+
+.story-card-actions {
+  /* position: absolute;
+  bottom: 0; */
+}
+
+A {text-decoration: none;}
