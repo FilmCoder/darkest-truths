@@ -52,7 +52,8 @@
 
 .bg-image {
       /* The image used */
-    background-image: url("pics/IMG_1844_rotated.png");
+    background-image: url("pics/IMG_1844@0,5x.jpg");
+    image-orientation: from-image;
     background-position: 0px calc(40% - 150px) !important;
     background-color: black;
 
@@ -92,6 +93,7 @@
 .story-card {
   background-color: #ffffff00 !important;
   outline: 1px solid #ffffff5c;
+  height: 100%;
 }
 
 .story-card .headline {
@@ -107,9 +109,9 @@
   color: rgba(255, 255, 255, 0.87) !important;
 }
 
-.story-card, .story-card-flex {
+/* .story-card, .story-card-flex {
   height: 100;
-}
+} */
 
 .story-card-actions {
   /* position: absolute;
@@ -117,3 +119,8 @@
 }
 
 A {text-decoration: none;}
+
+.story-card .writing-title {
+    padding-bottom: 5px;
+    display: block;
+}

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/FilmCoder/darkest-truths#readme",
   "dependencies": {
+    "masonry-layout": "^4.2.2",
     "vue": "^2.5.17"
   }
 }

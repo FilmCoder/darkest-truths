@@ -68,12 +68,13 @@
 
 
                         <div class="why-page" v-if="currentPage=='why'">
-                            <div class="opener">I think sometimes we hide, we fake, we pretend.</div>
+                            <div class="opener">I just want to be honest.</div>
 
                             <!-- <page></page> -->
                             <v-layout row wrap align-center>
 
-                                <span class="truth-body">This page is about honesty, about being vulnerable.
+                                <span class="truth-body">
+                                  This page is about honesty, about being vulnerable.
                                   Every day you visit you'll see a new piece of me.
 
                                   I want to be honest to every stranger and every friend, to listen to them,
@@ -83,99 +84,38 @@
                             </v-layout>
                         </div>
 
-
+                        <!-- Page where my written works are -->
                         <div class="written-page" v-if="currentPage=='written'">
-                            <!-- <v-layout row wrap align-center> -->
-                                <v-flex xs12>
-                                    <v-container grid-list-lg fluid>
-                                        <v-layout row wrap>
-                                            <!-- <v-flex v-for="n in 9" :key="n" xs2>
-                                                <v-card flat tile>
-                                                    <v-card-media :src="`https://unsplash.it/150/300?image=${Math.floor(Math.random() * 100) + 1}`" height="100px"></v-card-media>
-                                                </v-card>
-                                            </v-flex> -->
+                            <v-flex xs12>
+                                <v-container grid-list-lg fluid>
+                                    <v-layout row wrap>
 
-                                            <v-flex class="story-card-flex" xs12 sm4>
+                                        <!-- Block for a single writing, with title, body, and a link to the Medium post -->
+                                        <v-flex v-for="(writing, index) in writings" :key=index class="story-card-flex" xs12 sm6 md4>
+                                            <a :href="writing.link" target="_blank">
                                                 <v-card color="darken-2" class="white--text story-card">
-                                                    <v-card-title primary-title>
-                                                        <div class="headline">Sinking into the Swirling Torrent</div>
-                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
-                                                        </div>
+                                                    <v-card-title class="writing-title" primary-title>
+                                                        <div xs12 class="headline ">{{writing.title}}</div>
+                                                        <div xs12>{{writing.body}}</div>
                                                     </v-card-title>
                                                     <v-card-actions class="story-card-actions">
-                                                        <a href="https://medium.com/@DominicNapoleon/sinking-into-the-swirling-torrent-48cd3924e26c"
-                                                           target="_blank">
-                                                            <v-btn flat dark>Read now</v-btn>
-                                                        </a>
+                                                        <!-- <a :href="writing.link" target="_blank"> -->
+                                                            <!-- Two buttons, the first one to fill out the vertical height of the Card, and
+                                                            the other to be visible AND float to the bottom with absolute positioning
+                                                            (absolute positioning means it won't take up space hence we need the invisible button) -->
+                                                            <v-btn style="visibility: hidden;" flat dark>Read now</v-btn>
+                                                            <v-btn style="position: absolute; bottom: 8px;" flat dark>Read now</v-btn>
+                                                        <!-- </a> -->
                                                     </v-card-actions>
                                                 </v-card>
-                                            </v-flex>
+                                            </a>
+                                        </v-flex>
 
-                                            <v-flex class="story-card-flex" xs12 sm4>
-                                                <v-card color="darken-2" class="white--text story-card">
-                                                    <v-card-title primary-title>
-                                                        <div class="headline">Yo What is going on Home Dawg?</div>
-                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
-                                                          La dee dahhhhhh swag swag.
-                                                        </div>
-                                                    </v-card-title>
-                                                    <v-card-actions class="story-card-actions">
-                                                        <v-btn flat dark>Read now</v-btn>
-                                                    </v-card-actions>
-                                                </v-card>
-                                            </v-flex>
+                                    </v-layout>
+                                </v-container>
+                            </v-flex>
+                        </div> <!-- End of written-page div -->
 
-
-                                            <v-flex class="story-card-flex" xs12 sm4>
-                                                <v-card color="darken-2" class="white--text story-card">
-                                                    <v-card-title primary-title>
-                                                        <div class="headline">Yo What is going on Home Dawg?</div>
-                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
-                                                          La dee dahhhhhh swag swag.
-                                                        </div>
-                                                    </v-card-title>
-                                                    <v-card-actions class="story-card-actions">
-                                                        <v-btn flat dark>Read now</v-btn>
-                                                    </v-card-actions>
-                                                </v-card>
-                                            </v-flex>
-
-
-                                            <v-flex class="story-card-flex" xs12 sm4>
-                                                <v-card color="darken-2" class="white--text story-card">
-                                                    <v-card-title primary-title>
-                                                        <div class="headline">Yo What is going on Home Dawg?</div>
-                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
-                                                          La dee dahhhhhh swag swag.
-                                                        </div>
-                                                    </v-card-title>
-                                                    <v-card-actions class="story-card-actions">
-                                                        <v-btn flat dark>Read now</v-btn>
-                                                    </v-card-actions>
-                                                </v-card>
-                                            </v-flex>
-
-
-                                            <v-flex class="story-card-flex" xs12 sm4>
-                                                <v-card color="darken-2" class="white--text story-card">
-                                                    <v-card-title primary-title>
-                                                        <div class="headline">Yo What is going on Home Dawg?</div>
-                                                        <div>A blanket of fatigue so thick it covers the light of your life. I must escape.
-                                                          La dee dahhhhhh swag swag.
-                                                        </div>
-                                                    </v-card-title>
-                                                    <v-card-actions class="story-card-actions">
-                                                        <v-btn flat dark>Read now</v-btn>
-                                                    </v-card-actions>
-                                                </v-card>
-                                            </v-flex>
-
-
-                                        </v-layout>
-                                    </v-container>
-                                </v-flex>
-                            <!-- </v-layout> -->
-                        </div>
 
 
                     </v-container>
@@ -217,6 +157,7 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
 
+    <script src="writings.js"></script>
     <script src="index.js"></script>
 </body>
 
