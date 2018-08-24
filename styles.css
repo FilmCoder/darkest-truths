@@ -37,7 +37,7 @@
 
 .why-page, .me-page
  {
-  color: #ffffffcf;
+    color: rgba(255, 255, 255, 0.9);
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
@@ -76,6 +76,18 @@
 
 .truth-bodies {
     padding-top: 50px;
+}
+
+.why-body {
+  padding-top: 20px;
+  font-weight: 300;
+  opacity: 0.8;
+  font-size: 20px;
+  text-align: left;
+}
+
+.why-body p {
+    margin-bottom: 35px;
 }
 
 .why-button {
@@ -123,4 +135,10 @@ A {text-decoration: none;}
 .story-card .writing-title {
     padding-bottom: 5px;
     display: block;
+}
+
+
+.become-dark {
+    background-color: rgba(0, 0, 0, 0.45);
+    transition: background-color 1s;
 }

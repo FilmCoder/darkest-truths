@@ -1,7 +1,7 @@
 Vue.component('page', {
     template: '#page'
 })
-new Vue({
+vue = new Vue({
     el: '#app',
     data: {
         clipped: true,

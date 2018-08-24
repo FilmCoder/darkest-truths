@@ -13,10 +13,10 @@
 </head>
 
 <body class="bg-image">
-    <div id="app" >
-        <v-app class="">
+    <div :class="{'become-dark': currentPage=='why'}"  id="app">
+        <v-app>
 
-            <v-toolbar dark fixed app :clipped-left="clipped" class="main-toolbar elevation-0">
+            <v-toolbar dark fixed scroll-off-screen app :clipped-left="clipped" class="main-toolbar elevation-0">
 
 
                 <v-btn @click="currentPage='me'" flat>Me</v-btn>
@@ -68,19 +68,49 @@
 
 
                         <div class="why-page" v-if="currentPage=='why'">
-                            <div class="opener">I just want to be honest.</div>
+
+                          <div class="opener">I just want to be honest.</div>
 
                             <!-- <page></page> -->
-                            <v-layout row wrap align-center>
+                            <v-layout row wrap align-center justify-center>
 
-                                <span class="truth-body">
-                                  This page is about honesty, about being vulnerable.
-                                  Every day you visit you'll see a new piece of me.
+                                <v-flex class="why-body" xs12 md6>
+                                  <br>
 
-                                  I want to be honest to every stranger and every friend, to listen to them,
-                                  to trust them - even with my hopes and insecurities.
-                                </span>
 
+                                  <p>This page is about being vulnerable. Every time you visit this website, you'll see something new about me on the front page.</p>
+
+                                  <!-- I want to be honest to every stranger and every friend, to listen to them,
+                                                                to trust them - even with my hopes and insecurities. -->
+                                  <p>
+                                      When I was young, I wrote and read NOVELS, over the course of months. Now, I struggle to write or read a single page because I get bored as an intense urge to do something else wells up from within. I constantly crave bits and pieces of something new,
+                                      like I'm chasing little sparkles as they dissipate behind me into thin air.
+                                  </p>
+
+                                  <p>
+                                      This terrifies me because I'm mentally sick, and I don't know if I'll ever be well again. I was always taught as a child that I would mature with time and my values would change, but this is not the type of maturation I could have ever possibly imagined.
+                                      I think technology itself is beginning to warp the way our brains function and is making our attention spans shorter, increasing anxiety, increasing how much we care of other's opinions in a shallow way, and in general encouraging an overly selfish
+                                      view of the world. We're taught from day one to use technology to our own economic and personal benefit, and this warps the general advancement of technology in a selfish and manipulative way.
+                                  </p>
+
+                                  <p>
+                                      For instance, why does Youtube at the end of a video AUTOMATICALLY begin a new one without asking? Why does Facebook prioritize posts with flashy images and video as apposed to personal text posts from friends? The answer is simple: platforms are economically
+                                      incentivized to be designed addictively and manipulatively, and consumers reward these platforms with dollar bills. There's no real push to make change for the better because frankly, most people let themselves waste away their own lives because
+                                      it's comfortable.
+                                  </p>
+
+                                  <p>
+                                      There is a lurking monster beneath the technological revolution driven by greed and profit, and my brain has rewired itself to make reading, writing, and personal interactions brief and shallow.
+                                      I find myself in a world where it's hard to confide with honesty in anyone but my closest friends and family.
+                                  </p>
+
+                                  <p>
+                                      I think now more than ever, honesty is important. We need to be honest with ourselves and with others about how we're feeling, our insecurities, our hopes. For me, this website is about valuing honesty over ALL else. It's about welcoming discomfort. It's
+                                      about sharing ourselves with others not for Likes but because it's the first step to fixing ourselves. It's not about pumping me up, making me seem special, valuable, or employable. I'm sick of trying to pump myself up, and I think the constant pressure
+                                      society puts on me to do so is terrible for my own mental health.
+                                  </p>
+
+                              </v-flex>
                             </v-layout>
                         </div>
 
@@ -128,7 +158,7 @@
 
 
           <v-footer style="text-align: center" class="pa-3 bottom-toolbar" fixed height=70>
-              <v-btn @click="currentPage='why'" class="why-button" flat>Why Did I Write This?</v-btn>
+              <v-btn @click="currentPage='why'" class="why-button" flat>About this webpage</v-btn>
           </v-footer>
 
         </v-app>
