@@ -33,6 +33,10 @@
   font-weight: 400;
 }
 
+.main-toolbar {
+  animation: 6s linear 6s fadein;
+  animation-fill-mode: both;
+}
 
 
 .why-page, .me-page
@@ -42,6 +46,10 @@
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 10px;
+}
+
+.why-page {
+  margin-top: 50px;
 }
 
 .opener {
@@ -71,7 +79,10 @@
   padding-left: 50px;
   padding-right: 50px;
   font-weight: 300;
-  opacity: 0.8;
+  rgba(255, 255, 255, 0.85);
+
+  animation: 2s linear 2s fadein;
+  animation-fill-mode: both;
 }
 
 .truth-bodies {
@@ -141,4 +152,9 @@ A {text-decoration: none;}
 .become-dark {
     background-color: rgba(0, 0, 0, 0.45);
     transition: background-color 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
