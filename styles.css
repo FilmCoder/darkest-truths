@@ -39,7 +39,7 @@
 }
 
 
-.why-page, .me-page
+.why-page, .me-page, .tech-page, .film-page
  {
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
@@ -81,7 +81,7 @@
   font-weight: 300;
   rgba(255, 255, 255, 0.85);
 
-  animation: 2s linear 2s fadein;
+  animation: 3s linear 3s fadein;
   animation-fill-mode: both;
 }
 
@@ -157,4 +157,8 @@ A {text-decoration: none;}
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+b {
+    font-weight: bold;
 }
